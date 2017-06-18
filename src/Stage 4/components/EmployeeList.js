@@ -6,9 +6,9 @@ class EmployeeList extends Component {
       <div>
         <ul className="listContainer">
           { 
-            this.props.employees.map((employee) => {
+            this.props.employees.map((employee,i) => {
               return (
-                <li className="listText" key={employee.id} onClick={ () => { this.props.selectEmployee(employee) }}> { employee.name } </li>
+                <li className="listText" key={i} onClick={ () => { this.props.selectEmployee(employee) }}> { employee.name } </li>
               )
             })
           }
